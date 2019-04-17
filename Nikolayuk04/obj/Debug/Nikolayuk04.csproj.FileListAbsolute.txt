@@ -1,0 +1,9 @@
+C:\Users\Dariya\uni\Csharp\Nikolayuk04\Nikolayuk04\obj\Debug\Nikolayuk04.csprojAssemblyReference.cache
+C:\Users\Dariya\uni\Csharp\Nikolayuk04\Nikolayuk04\obj\Debug\PersonListViewl.baml
+C:\Users\Dariya\uni\Csharp\Nikolayuk04\Nikolayuk04\obj\Debug\EditPersonView.g.cs
+C:\Users\Dariya\uni\Csharp\Nikolayuk04\Nikolayuk04\obj\Debug\MainWindow.g.cs
+C:\Users\Dariya\uni\Csharp\Nikolayuk04\Nikolayuk04\obj\Debug\AddPerson.g.cs
+C:\Users\Dariya\uni\Csharp\Nikolayuk04\Nikolayuk04\obj\Debug\PersonListViewl.g.cs
+C:\Users\Dariya\uni\Csharp\Nikolayuk04\Nikolayuk04\obj\Debug\App.g.cs
+C:\Users\Dariya\uni\Csharp\Nikolayuk04\Nikolayuk04\obj\Debug\Nikolayuk04_MarkupCompile.cache
+C:\Users\Dariya\uni\Csharp\Nikolayuk04\Nikolayuk04\obj\Debug\Nikolayuk04_MarkupCompile.lref

@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="Nikolayuk04.Views.PersonListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+            d:DesignHeight="400" d:DesignWidth="700" Background="LightPink">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.85*"></RowDefinition>
+            <RowDefinition Height="0.15*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.85*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <DataGrid Name ="Persons" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" SelectedItem="{Binding SelectedItem}" ItemsSource="{Binding Persons, Mode=OneWay}" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name, Mode=TwoWay}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Last name" Binding="{Binding LastName, Mode=TwoWay}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Birthday" Binding="{Binding Birthday, StringFormat='dd/MM/yyyy',  Mode=TwoWay}"></DataGridTextColumn>
+                <DataGridTextColumn Header="E-mail" Binding="{Binding Email, Mode=TwoWay}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Is adult" Binding="{Binding IsAdult}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Is birthday" Binding="{Binding IsBirthday}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Sun sign" Binding="{Binding SunSign}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Chinese sign" Binding="{Binding ChineseSign}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Grid.Row="1" Grid.Column="0" Margin="14" Content="Insert"/>
+        <Button Grid.Row="1" Grid.Column="1" Margin="14" Content="Delete"/>
+        <Button Grid.Row="1" Grid.Column="2" Margin="14" Content="Update" />
+        <Button Grid.Row="1" Grid.Column="3" Margin="14" Content="Close" />
+        <Grid Grid.Row="0" Grid.Column="3">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="0.6*"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="0.7*"></RowDefinition>
+                <RowDefinition Height="0.6*"></RowDefinition>
+                <RowDefinition Height="0.6*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ComboBox Margin="14" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="0" Width="120" Height="30" >
+                <ComboBoxItem Content="Name"></ComboBoxItem>
+                <ComboBoxItem Content="Last name"></ComboBoxItem>
+                <ComboBoxItem Content="Is birthday"></ComboBoxItem>
+                <ComboBoxItem Content="Sun sign"></ComboBoxItem>
+                <ComboBoxItem Content="Chinese sign"></ComboBoxItem>
+                <ComboBoxItem Content="Birthday"></ComboBoxItem>
+                <ComboBoxItem Content="Email"></ComboBoxItem>
+                <ComboBoxItem Content="Is adult"></ComboBoxItem>
+                
+            </ComboBox>
+            <Button Grid.Row="1" Margin="14" Content='Sort'/>
+            <TextBlock Grid.Row="2" Margin="14, 10" HorizontalAlignment="Stretch" Text="Filter by:"/>
+            <TextBox Grid.Row="3" Margin="14, 15" Text="{Binding Query, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Grid.Row="4" Margin="14" Content="Filter" />
+            <Button Grid.Row="5" Margin="14" Content="Reset filters" />
+        </Grid>
+
+
+
+    </Grid>
+</UserControl>
